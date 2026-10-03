@@ -4,6 +4,8 @@
 
 本仓库保留游戏设计文档，并加入一个零依赖的静态浏览器流程验证原型：准备 → 自动探索 → 网格战利品回仓 → 基地生产。它不是完整首版；界面中的“时空列车”为工作名称，正式名称尚未确定。
 
+**在线试玩**：https://iizzaya.github.io/spacetime-train/
+
 ## 运行原型
 
 需要 Node.js 22+（测试与构建），浏览器需支持 ES modules、原生 dialog 和 localStorage。无需 npm install。
@@ -17,7 +19,7 @@ python3 -m http.server 4173 --directory dist
 
 打开 http://localhost:4173/。使用静态服务器访问，不要直接双击 HTML。所有资源使用相对路径，可部署到 GitHub Pages 的 `/spacetime-train/` 子路径。
 
-操作、暂定参数、未实现内容与验证记录见[原型说明](docs/prototype.md)。GitHub Actions 工作流先检查与测试，再构建和部署 `dist/`；仓库须另行启用 Pages 的 GitHub Actions 来源。发布状态以实际部署结果为准。
+操作、暂定参数、未实现内容与验证记录见[原型说明](docs/prototype.md)。GitHub Actions 工作流先检查与测试，再构建和部署 `dist/`；仓库须另行启用 Pages 的 GitHub Actions 来源。首轮自动部署与线上核心流程已验证通过；详细边界见原型说明。
 
 ## 从这里开始
 
