@@ -1,8 +1,23 @@
-# spacetime-train 游戏设计文档
+# spacetime-train · 时空列车流程验证版
 
 `spacetime-train` 是一款以界面为主的静态 Web 前端游戏项目。玩法结合网格库存、基地生产、增量成长和随机外出搜刮。
 
-本仓库目前保存设计文档。尚无游戏代码、可运行原型或已验证的技术方案。仓库名称是项目标识，正式游戏名称尚未确定。
+本仓库保留游戏设计文档，并加入一个零依赖的静态浏览器流程验证原型：准备 → 自动探索 → 网格战利品回仓 → 基地生产。它不是完整首版；界面中的“时空列车”为工作名称，正式名称尚未确定。
+
+## 运行原型
+
+需要 Node.js 22+（测试与构建），浏览器需支持 ES modules、原生 dialog 和 localStorage。无需 npm install。
+
+```sh
+npm run check
+npm test
+npm run build
+python3 -m http.server 4173 --directory dist
+```
+
+打开 http://localhost:4173/。使用静态服务器访问，不要直接双击 HTML。所有资源使用相对路径，可部署到 GitHub Pages 的 `/spacetime-train/` 子路径。
+
+操作、暂定参数、未实现内容与验证记录见[原型说明](docs/prototype.md)。GitHub Actions 工作流先检查与测试，再构建和部署 `dist/`；仓库须另行启用 Pages 的 GitHub Actions 来源。发布状态以实际部署结果为准。
 
 ## 从这里开始
 
@@ -28,6 +43,6 @@
 - **后续方向**：保留的成长或扩展设想，未自动进入首版范围。
 - **待确认**：信息不足，使用 `【待确认：具体问题】` 标记。
 
-首版范围、技术栈和里程碑尚未确定。不要把全部已确认方向或后续设想视为首版制作清单。
+完整首版范围和里程碑尚未确定。本次验证原型使用原生 HTML/CSS/JavaScript；这不锁定完整产品技术栈。不要把全部已确认方向或后续设想视为首版制作清单。
 
 文档版本：v0.1 设计快照。更新日期：2026-10-03。术语及维护方式见[文档约定](docs/documentation.md)与[项目词汇表](docs/glossary.md)。

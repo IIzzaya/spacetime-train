@@ -1,0 +1,1 @@
+{"name":"spacetime-train","version":"0.1.0","private":true,"type":"module","scripts":{"test":"node --test tests/*.test.js","check":"node --check app/engine.js && node --check app/main.js","build":"node scripts/build.js"},"engines":{"node":">=22"}}
